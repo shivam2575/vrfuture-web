@@ -1,3 +1,6 @@
+# vrfuture-web
+
+A marketing website for a coaching institute for lead generation (enquiry form). Made using Next.js, node.js, mongoseDB and tailwind css
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
