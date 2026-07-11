@@ -8,9 +8,9 @@ import {
 
 export function WhyVR() {
   return (
-    <section className="my-4 p-2 md:my-8">
+    <section className="max-w-7xl mx-auto px-4 py-12 md:py-20">
       <div className="flex flex-col gap-4">
-        <h2 className="font-heading text-4xl md:text-6xl text-center">
+        <h2 className="font-heading text-4xl md:text-6xl text-center mb-8">
           Why choose us?
         </h2>
         <div className="flex flex-col md:flex-row gap-6 px-2">
