@@ -5,10 +5,11 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { Section } from "./Section";
 
 export function WhyVR() {
   return (
-    <section className="max-w-7xl mx-auto px-4 py-12 md:py-20">
+    <Section>
       <div className="flex flex-col gap-4">
         <h2 className="font-heading text-4xl md:text-6xl text-center mb-8">
           Why choose us?
@@ -33,6 +34,6 @@ export function WhyVR() {
           ))}
         </div>
       </div>
-    </section>
+    </Section>
   );
 }

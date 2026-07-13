@@ -1,14 +1,15 @@
 import { Separator } from "@/components/ui/separator";
 import Image from "next/image";
+import { Section } from "./Section";
 
 export function About() {
   return (
-    <section className="max-w-7xl mx-auto px-4 py-12 md:py-20">
-      <div>
+    <Section>
+      <div className="">
         <h2 className="font-heading text-4xl md:text-6xl text-center mb-8">
           Our Story
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+        <div className="flex flex-col md:flex-row gap-8 items-center">
           <div className="">
             <Image
               src="/hero1.jpg"
@@ -18,7 +19,7 @@ export function About() {
               className="w-full h-auto rounded-2xl shadow-md"
             />
           </div>
-          <Separator className="mx-2" orientation="vertical" />
+          <Separator className="hidden md:block" orientation="vertical" />
           <div>
             <p className="font-sans text-brand">
               It is a long established fact that a reader will be distracted by
@@ -35,6 +36,6 @@ export function About() {
           </div>
         </div>
       </div>
-    </section>
+    </Section>
   );
 }
