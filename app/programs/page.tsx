@@ -22,7 +22,9 @@ export default function ProgramsPage() {
     <div>
       {/* //Heading & desc */}
       <Section className="flex flex-col gap-6 items-center justify-center">
-        <h1 className="text-6xl text-brand font-heading">Our Programs</h1>
+        <h1 className="text-4xl md:text-6xl text-brand font-heading">
+          Our Programs
+        </h1>
         <p className="text-lg text-muted">
           VR-powered coaching for Classes 5–12, JEE & NEET in Daman. CBSE, GSEB
           & ICSE boards in English, Hindi & Gujarati.

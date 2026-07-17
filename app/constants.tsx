@@ -119,13 +119,13 @@ export const TESTIMONIALS = [
       "Teaching in Gujarati and English both helped my son a lot. VRFuture feels personal — they know every child by name.",
   },
   {
-    name: "Rahul Desai",
+    name: "Rahul Deshmukh",
     role: "Class 12 student (JEE)",
     quote:
       "Being able to visualize 3D problems in VR made JEE prep click for me. The teachers are patient and genuinely want you to succeed.",
   },
   {
-    name: "Anjali Patel",
+    name: "Anjali Patil",
     role: "Parent of Class 6 student",
     quote:
       "Teaching in Gujarati and English both helped my son a lot. VRFuture feels personal — they know every child by name.",
@@ -161,3 +161,111 @@ export const PROGRAMS = [
 
 export const BOARDS = ["CBSE", "GSEB", "ICSE"];
 export const MEDIUMS = ["English", "Hindi", "Gujarati"];
+
+export const FACULTY = [
+  {
+    name: "Mr. Rajni Rai",
+    subject: "Physics",
+    qualification: "M.Sc. Physics",
+    bio: "10+ years preparing students for boards and JEE.",
+    photo: "faculty-1.jpg",
+  },
+  {
+    name: "Dr. Anjali Sharma",
+    subject: "Chemistry",
+    qualification: "Ph.D. in Organic Chemistry",
+    bio: "Passionate researcher and mentor with 8+ years of NEET coaching experience.",
+    photo: "faculty-2.jpg",
+  },
+  {
+    name: "Prof. Rajesh Verma",
+    subject: "Mathematics",
+    qualification: "B.Tech, IIT Bombay",
+    bio: "Specialist in Calculus and Algebra. Helped over 500 students crack IIT-JEE.",
+    photo: "faculty-3.jpg",
+  },
+  {
+    name: "Ms. Priya Nair",
+    subject: "Biology",
+    qualification: "M.Sc. Botany, B.Ed.",
+    bio: "Simplifies complex biological diagrams and concepts for board exams.",
+    photo: "faculty-4.jpg",
+  },
+  {
+    name: "Mr. Amit Patel",
+    subject: "Computer Science",
+    qualification: "MCA",
+    bio: "Full-stack developer turned educator. Teaches Python and Java with live coding.",
+    photo: "faculty-5.jpg",
+  },
+];
+
+export const GALLERY = [
+  { src: "gal1.png", alt: "Student exploring a 3D model in VR" },
+  { src: "gal2.png", alt: "Class using VR headsets together" },
+  { src: "gal3.png", alt: "Student exploring a 3D model in VR" },
+  { src: "gal4.png", alt: "Class using VR headsets together" },
+  { src: "gal5.png", alt: "Student exploring a 3D model in VR" },
+  { src: "gal6.png", alt: "Class using VR headsets together" },
+];
+
+export const GALLERYSECTION = [
+  {
+    images: [
+      {
+        src: "/gal1.png",
+        alt: "Coastal cliffs and ocean view",
+      },
+    ],
+  },
+  {
+    type: "grid",
+    images: [
+      {
+        src: "/gal5.png",
+        alt: "Silhouettes on beach",
+      },
+      {
+        src: "/gal4.png",
+        alt: "Snowy mountain peaks",
+      },
+      {
+        src: "/gal3.png",
+        alt: "Rolling green hills",
+      },
+      {
+        src: "/gal2.png",
+        alt: "Sunset landscape",
+      },
+    ],
+  },
+  {
+    type: "grid",
+    images: [
+      {
+        src: "/gal2.png",
+        alt: "Silhouettes on beach",
+      },
+      {
+        src: "/gal3.png",
+        alt: "Snowy mountain peaks",
+      },
+      {
+        src: "/gal4.png",
+        alt: "Rolling green hills",
+      },
+      {
+        src: "/gal5.png",
+        alt: "Sunset landscape",
+      },
+    ],
+  },
+  {
+    images: [
+      {
+        src: "/gal6.png",
+        alt: "Coastal cliffs and ocean view",
+      },
+    ],
+  },
+];
