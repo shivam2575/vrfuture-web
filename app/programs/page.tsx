@@ -25,7 +25,7 @@ export default function ProgramsPage() {
         <h1 className="text-4xl md:text-6xl text-brand font-heading">
           Our Programs
         </h1>
-        <p className="text-lg text-muted">
+        <p className="text-lg text-muted-foreground">
           VR-powered coaching for Classes 5–12, JEE & NEET in Daman. CBSE, GSEB
           & ICSE boards in English, Hindi & Gujarati.
         </p>

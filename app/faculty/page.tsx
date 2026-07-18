@@ -19,7 +19,7 @@ export default function FacultyPage() {
         <h1 className="text-4xl md:text-6xl text-brand font-heading">
           Our Faculty
         </h1>
-        <p className="text-lg text-muted">
+        <p className="text-lg text-muted-foreground">
           Meet the experienced teachers behind VRFuture — expert faculty for
           Classes 5–12, JEE & NEET in Daman.
         </p>

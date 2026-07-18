@@ -29,7 +29,7 @@ export function Testimonials() {
               className="md:basis-1/2 lg:basis-1/3"
             >
               <Card className="text-center">
-                <CardHeader>
+                <CardHeader className="flex justify-center">
                   <Quote />
                 </CardHeader>
                 <CardContent>{testimonial.quote}</CardContent>
