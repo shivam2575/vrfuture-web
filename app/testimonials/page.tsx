@@ -30,7 +30,7 @@ export default function TestimonialPage() {
         className={cn("grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6")}
       >
         {TESTIMONIALS.map((testimonial) => (
-          <Card key={} className="text-center">
+          <Card key={testimonial.name} className="text-center">
             <CardHeader className="flex justify-center">
               <Quote />
             </CardHeader>
