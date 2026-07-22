@@ -1,11 +1,6 @@
 import { cn } from "@/lib/utils";
+import { Metadata } from "next";
 import Image from "next/image";
-
-export const metadata = {
-  title: "Gallery — VR in Action | VRFuture Coaching, Daman",
-  description:
-    "See VR-powered learning in action at VRFuture Coaching Institute, Daman — students exploring concepts through immersive virtual reality.",
-};
 
 type GalleryImage = {
   src: string;

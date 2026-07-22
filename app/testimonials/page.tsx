@@ -9,7 +9,7 @@ import { TESTIMONIALS } from "../constants";
 import { Quote } from "lucide-react";
 import { cn } from "@/lib/utils";
 export const metadata = {
-  title: "Testimonials | VRFuture Coaching Institute, Daman",
+  title: "Testimonials",
   description:
     "Hear from parents and students about VR-powered learning at VRFuture Coaching Institute, Daman.",
 };

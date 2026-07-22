@@ -12,7 +12,7 @@ import {
 import { CTA } from "../components/homepage/CTA";
 
 export const metadata = {
-  title: "Programs — Classes 5–12, JEE & NEET | VRFuture Coaching, Daman",
+  title: "Programs",
   description:
     "VR-powered coaching for Classes 5–12, JEE & NEET in Daman. CBSE, GSEB & ICSE boards in English, Hindi & Gujarati.",
 };

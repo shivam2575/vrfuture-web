@@ -7,7 +7,7 @@ import { cn } from "@/lib/utils";
 import { Badge } from "@/components/ui/badge";
 
 export const metadata = {
-  title: "Faculty | VRFuture Coaching Institute, Daman",
+  title: "Faculty",
   description:
     "Meet the experienced teachers behind VRFuture — expert faculty for Classes 5–12, JEE & NEET in Daman.",
 };

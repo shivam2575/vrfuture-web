@@ -1,7 +1,7 @@
 import { EnquiryForm } from "../components/contact/EnquiryForm";
 
 export const metadata = {
-  title: "Contact & Enquiry | VRFuture Coaching Institute, Daman",
+  title: "Contact",
   description:
     "Enquire about VR-powered coaching for Classes 5–12, JEE & NEET in Daman. Get a callback from VRFuture.",
 };

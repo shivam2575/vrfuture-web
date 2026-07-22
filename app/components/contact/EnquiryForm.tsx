@@ -1,6 +1,5 @@
 "use client";
 
-import * as React from "react";
 import { Controller, useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { toast } from "sonner";
@@ -18,18 +17,11 @@ import {
 import {
   Field,
   FieldContent,
-  FieldDescription,
   FieldError,
   FieldGroup,
   FieldLabel,
 } from "@/components/ui/field";
 import { Input } from "@/components/ui/input";
-import {
-  InputGroup,
-  InputGroupAddon,
-  InputGroupText,
-  InputGroupTextarea,
-} from "@/components/ui/input-group";
 import { Section } from "../homepage/Section";
 import { cn } from "@/lib/utils";
 import { Textarea } from "@/components/ui/textarea";
@@ -41,16 +33,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { BOARDS, CLASSES } from "@/app/constants";
-
-const formSchema = z.object({
-  name: z.string().min(2, "Please enter your name."),
-  phone: z
-    .string()
-    .regex(/^[6-9]\d{9}$/, "Enter a valid 10 digit mobile number."),
-  class: z.string().min(1, "Please select a class."),
-  board: z.string().optional(),
-  message: z.string().optional(),
-});
+import { formSchema } from "@/lib/exquirySchema";
 
 export function EnquiryForm() {
   const form = useForm<z.output<typeof formSchema>>({
@@ -61,11 +44,46 @@ export function EnquiryForm() {
       class: "",
       board: "",
       message: "",
+      company: "",
     },
   });
+  const { isSubmitting } = form.formState;
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log(values);
+  async function onSubmit(values: z.infer<typeof formSchema>) {
+    if (values.company?.trim()) {
+      toast.error("Your request looks suspicious. Please try again.", {
+        position: "bottom-right",
+      });
+      return;
+    }
+
+    //send a POST request to /api/enquiry
+    try {
+      const body = JSON.stringify(values);
+      const response = await fetch("/api/enquiry", {
+        method: "POST",
+        headers: {
+          "Content-type": "application/json",
+        },
+        body,
+      });
+
+      if (!response.ok) {
+        throw new Error(`HTTP error! Status: ${response.status}`);
+      }
+
+      const data = await response.json();
+
+      toast.success("Thanks! We'll call you shortly.", {
+        position: "bottom-right",
+      });
+      console.log("Success", data);
+      form.reset();
+    } catch (err) {
+      toast.error("Couldn't send — please WhatsApp us instead.", {
+        position: "bottom-right",
+      });
+    }
   }
   return (
     <div className="">
@@ -125,7 +143,6 @@ export function EnquiryForm() {
                     </Field>
                   )}
                 />
-
                 <Controller
                   name="phone"
                   control={form.control}
@@ -147,7 +164,6 @@ export function EnquiryForm() {
                     </Field>
                   )}
                 />
-
                 <Controller
                   name="class"
                   control={form.control}
@@ -184,7 +200,6 @@ export function EnquiryForm() {
                     </Field>
                   )}
                 />
-
                 <Controller
                   name="board"
                   control={form.control}
@@ -242,6 +257,39 @@ export function EnquiryForm() {
                     </Field>
                   )}
                 />
+                <Controller
+                  name="company"
+                  control={form.control}
+                  render={({ field, fieldState }) => (
+                    <Field
+                      data-invalid={fieldState.invalid}
+                      aria-hidden="true"
+                      style={{
+                        position: "absolute",
+                        left: "-9999px",
+                        top: 0,
+                        width: "1px",
+                        height: "1px",
+                        opacity: 0,
+                        overflow: "hidden",
+                        pointerEvents: "none",
+                      }}
+                    >
+                      <Input
+                        {...field}
+                        id="vr-contact-form-company"
+                        aria-hidden="true"
+                        aria-invalid={fieldState.invalid}
+                        autoComplete="new-password"
+                        tabIndex={-1}
+                        value={field.value ?? ""}
+                      />
+                      {fieldState.invalid && (
+                        <FieldError errors={[fieldState.error]} />
+                      )}
+                    </Field>
+                  )}
+                />
               </FieldGroup>
             </form>
           </CardContent>
@@ -254,8 +302,12 @@ export function EnquiryForm() {
               >
                 Reset
               </Button>
-              <Button type="submit" form="vr-contact-form">
-                Submit
+              <Button
+                disabled={isSubmitting}
+                type="submit"
+                form="vr-contact-form"
+              >
+                {isSubmitting ? "Sending" : "Submit"}
               </Button>
             </Field>
           </CardFooter>
