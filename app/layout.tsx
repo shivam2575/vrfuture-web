@@ -5,6 +5,7 @@ import { Footer } from "./components/global/Footer";
 import { Header } from "./components/global/Header";
 import { cn } from "@/lib/utils";
 import { Toaster } from "@/components/ui/sonner";
+import { Analytics } from "@vercel/analytics/next";
 
 export const metadata = {
   metadataBase: new URL("https://vrfuture.in"),
@@ -56,6 +57,7 @@ export default function RootLayout({
         <Toaster />
         <Footer />
         <WhatsappButton />
+        <Analytics />
       </body>
     </html>
   );
