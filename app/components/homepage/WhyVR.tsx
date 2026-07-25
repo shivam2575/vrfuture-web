@@ -23,8 +23,10 @@ export function WhyVR() {
             >
               <div className="absolute inset-0 z-30 aspect-video bg-black/35" />
               <Image
-                src={feature.img}
+                src={`/${feature.img}`}
                 alt="Student wearing a vr headset"
+                width={800}
+                height={700}
                 className="relative z-20 aspect-video w-full object-cover"
               />
               <CardHeader>

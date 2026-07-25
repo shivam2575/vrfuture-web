@@ -199,21 +199,12 @@ export const FACULTY = [
   },
 ];
 
-export const GALLERY = [
-  { src: "gal1.webp", alt: "Student exploring a 3D model in VR" },
-  { src: "gal2.webp", alt: "Class using VR headsets together" },
-  { src: "gal3.webp", alt: "Student exploring a 3D model in VR" },
-  { src: "gal4.webp", alt: "Class using VR headsets together" },
-  { src: "gal5.webp", alt: "Student exploring a 3D model in VR" },
-  { src: "gal6.webp", alt: "Class using VR headsets together" },
-];
-
 export const GALLERYSECTION = [
   {
     images: [
       {
-        src: "/gal1.png",
-        alt: "Coastal cliffs and ocean view",
+        src: "/gal1.webp",
+        alt: "Student exploring a 3D model in VR",
       },
     ],
   },
@@ -221,20 +212,20 @@ export const GALLERYSECTION = [
     type: "grid",
     images: [
       {
-        src: "/gal5.png",
-        alt: "Silhouettes on beach",
+        src: "/gal5.webp",
+        alt: "Student exploring a 3D model in VR",
       },
       {
-        src: "/gal4.png",
-        alt: "Snowy mountain peaks",
+        src: "/gal4.webp",
+        alt: "Class using VR headsets together",
       },
       {
-        src: "/gal3.png",
-        alt: "Rolling green hills",
+        src: "/gal3.webp",
+        alt: "Student exploring a 3D model in VR",
       },
       {
-        src: "/gal2.png",
-        alt: "Sunset landscape",
+        src: "/gal2.webp",
+        alt: "Class using VR headsets together",
       },
     ],
   },
@@ -242,28 +233,28 @@ export const GALLERYSECTION = [
     type: "grid",
     images: [
       {
-        src: "/gal2.png",
-        alt: "Silhouettes on beach",
+        src: "/gal2.webp",
+        alt: "Student exploring a 3D model in VR",
       },
       {
-        src: "/gal3.png",
-        alt: "Snowy mountain peaks",
+        src: "/gal3.webp",
+        alt: "Student exploring a 3D model in VR",
       },
       {
-        src: "/gal4.png",
-        alt: "Rolling green hills",
+        src: "/gal4.webp",
+        alt: "Student exploring a 3D model in VR",
       },
       {
-        src: "/gal5.png",
-        alt: "Sunset landscape",
+        src: "/gal5.webp",
+        alt: "Student exploring a 3D model in VR",
       },
     ],
   },
   {
     images: [
       {
-        src: "/gal6.png",
-        alt: "Coastal cliffs and ocean view",
+        src: "/gal6.webp",
+        alt: "Student exploring a 3D model in VR",
       },
     ],
   },

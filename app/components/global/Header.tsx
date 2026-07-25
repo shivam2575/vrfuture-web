@@ -23,10 +23,10 @@ export function Header() {
         <Link href="/">
           <Image
             src="/logo_white.png"
-            width={250}
-            height={100}
+            width={768}
+            height={288}
             alt="VRFuture Coaching Institute"
-            className="w-auto h-auto"
+            className="w-auto h-12"
           />
         </Link>
 

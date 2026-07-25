@@ -1,5 +1,4 @@
 import { cn } from "@/lib/utils";
-import { Metadata } from "next";
 import Image from "next/image";
 
 type GalleryImage = {
@@ -49,6 +48,7 @@ const Gallery = ({ sections }: { sections: GallerySection[] }) => {
                   alt={image.alt}
                   width={600}
                   height={400}
+                  loading="eager"
                   sizes="(max-width: 768px) 100vw, 50vw"
                   className="w-full h-auto rounded-lg"
                 />
