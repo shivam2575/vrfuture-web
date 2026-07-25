@@ -12,7 +12,7 @@ export function About() {
         <div className="flex flex-col md:flex-row gap-8 items-center">
           <div className="">
             <Image
-              src="/hero1.jpg"
+              src="/hero1.webp"
               width={800}
               height={600}
               alt="Students learning with VR headsets at VRFuture"

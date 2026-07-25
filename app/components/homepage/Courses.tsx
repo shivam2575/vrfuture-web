@@ -37,6 +37,7 @@ export function Courses() {
               <Link
                 href="/programs"
                 className="rounded-2xl bg-brand text-white py-2 px-4"
+                aria-label={`Learn more about our ${course.title}`}
               >
                 Learn More
               </Link>

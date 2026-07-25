@@ -34,17 +34,17 @@ export const FEATURES = [
   {
     title: "Visualize Concepts",
     desc: "VR turns abstract topics into things students can see and explore.",
-    img: "placeholder.png",
+    img: "placeholder.webp",
   },
   {
     title: "Better Retention",
     desc: "Immersive, hands-on learning sticks far longer than reading a textbook.",
-    img: "placeholder.png",
+    img: "placeholder.webp",
   },
   {
     title: "Higher Engagement",
     desc: "Curiosity-driven VR lessons keep students genuinely interested.",
-    img: "placeholder.png",
+    img: "placeholder.webp",
   },
 ];
 
@@ -52,17 +52,17 @@ export const COURSES = [
   {
     title: "Classes 5 to 12",
     desc: "All the subjects from class 5 to 12 for CBSE, GSEB & ICSE boards all over Daman, Vapi, Silvas and valsad",
-    img: "placeholder.png",
+    img: "placeholder.webp",
   },
   {
     title: "JEE Preparation",
     desc: "JEE preparation for class 11th-12th science students.",
-    img: "placeholder.png",
+    img: "placeholder.webp",
   },
   {
     title: "NEET Preparation",
     desc: "NEET preparation for class 11th-12th science students.",
-    img: "placeholder.png",
+    img: "placeholder.webp",
   },
 ];
 
@@ -200,12 +200,12 @@ export const FACULTY = [
 ];
 
 export const GALLERY = [
-  { src: "gal1.png", alt: "Student exploring a 3D model in VR" },
-  { src: "gal2.png", alt: "Class using VR headsets together" },
-  { src: "gal3.png", alt: "Student exploring a 3D model in VR" },
-  { src: "gal4.png", alt: "Class using VR headsets together" },
-  { src: "gal5.png", alt: "Student exploring a 3D model in VR" },
-  { src: "gal6.png", alt: "Class using VR headsets together" },
+  { src: "gal1.webp", alt: "Student exploring a 3D model in VR" },
+  { src: "gal2.webp", alt: "Class using VR headsets together" },
+  { src: "gal3.webp", alt: "Student exploring a 3D model in VR" },
+  { src: "gal4.webp", alt: "Class using VR headsets together" },
+  { src: "gal5.webp", alt: "Student exploring a 3D model in VR" },
+  { src: "gal6.webp", alt: "Class using VR headsets together" },
 ];
 
 export const GALLERYSECTION = [

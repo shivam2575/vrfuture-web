@@ -35,7 +35,9 @@ export function Testimonials() {
                 <CardContent>{testimonial.quote}</CardContent>
                 <CardFooter className="flex flex-col">
                   <p className="font-semibold">{testimonial.name}</p>
-                  <p className="text-sm text-muted">{testimonial.role}</p>
+                  <p className="text-sm text-muted-foreground">
+                    {testimonial.role}
+                  </p>
                 </CardFooter>
               </Card>
             </CarouselItem>

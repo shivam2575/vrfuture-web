@@ -17,6 +17,7 @@ export default function Home() {
     telephone: "+918849620478",
     logo: "https://vrfuture.in/logo_white.png",
     image: "https://vrfuture.in/og-image.png",
+    priceRange: "₹₹",
     sameAs: [
       "https://www.instagram.com/vrfuture_",
       "https://www.facebook.com/vrfuture20/",

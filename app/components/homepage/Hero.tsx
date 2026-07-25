@@ -1,8 +1,10 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export function Hero() {
   return (
-    <section className="relative min-h-screen w-full bg-[url('/hero1.jpg')] bg-cover bg-center">
+    <section className="relative min-h-screen w-full bg-cover bg-center">
+      <Image src="/hero1.webp" alt="VR Classroom" priority fill />
       <div className="absolute inset-0 bg-black/50"></div>
       <div className="relative z-10 flex min-h-screen flex-col items-center justify-center text-white">
         <div className="flex flex-col text-center gap-2">

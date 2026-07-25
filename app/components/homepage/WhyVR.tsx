@@ -6,6 +6,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Section } from "./Section";
+import Image from "next/image";
 
 export function WhyVR() {
   return (
@@ -20,8 +21,8 @@ export function WhyVR() {
               key={feature.title}
               className="relative mx-auto w-full max-w-sm pt-0 shadow-md"
             >
-              {/* <div className="absolute inset-0 z-30 aspect-video bg-black/35" /> */}
-              <img
+              <div className="absolute inset-0 z-30 aspect-video bg-black/35" />
+              <Image
                 src={feature.img}
                 alt="Student wearing a vr headset"
                 className="relative z-20 aspect-video w-full object-cover"
