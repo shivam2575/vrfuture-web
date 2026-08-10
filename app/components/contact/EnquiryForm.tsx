@@ -22,7 +22,7 @@ import {
   FieldLabel,
 } from "@/components/ui/field";
 import { Input } from "@/components/ui/input";
-import { Section } from "../homepage/Section";
+import { Section } from "../global/Section";
 import { cn } from "@/lib/utils";
 import { Textarea } from "@/components/ui/textarea";
 import {
@@ -83,15 +83,14 @@ export function EnquiryForm() {
       toast.error("Couldn't send — please WhatsApp us instead.", {
         position: "bottom-right",
       });
+      console.log(`Error: ${err}`);
     }
   }
   return (
     <div className="">
       {/* //Heading & desc */}
       <Section className="flex flex-col gap-6 items-center justify-center">
-        <h1 className="text-4xl md:text-6xl text-brand font-heading">
-          Contact Us
-        </h1>
+        <h1 className="text-5xl font-heading text-heading">Contact Us</h1>
         <p className="text-lg text-muted-foreground">
           Enquire about VR-powered coaching for Classes 5–12, JEE & NEET in
           Daman. Get a callback from VRFuture.
@@ -134,8 +133,8 @@ export function EnquiryForm() {
                         {...field}
                         id="vr-contact-form-name"
                         aria-invalid={fieldState.invalid}
-                        placeholder="Shiavm Kumar"
-                        autoComplete="off"
+                        placeholder="Shivam Kumar"
+                        autoComplete="name"
                       />
                       {fieldState.invalid && (
                         <FieldError errors={[fieldState.error]} />
@@ -153,10 +152,12 @@ export function EnquiryForm() {
                       </FieldLabel>
                       <Input
                         {...field}
+                        type="tel"
+                        inputMode="numeric"
                         id="vr-contact-form-phone"
                         aria-invalid={fieldState.invalid}
                         placeholder="9876543210"
-                        autoComplete="off"
+                        autoComplete="tel"
                       />
                       {fieldState.invalid && (
                         <FieldError errors={[fieldState.error]} />

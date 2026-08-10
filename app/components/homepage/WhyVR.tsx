@@ -5,21 +5,21 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Section } from "./Section";
+import { Section } from "../global/Section";
 import Image from "next/image";
 
 export function WhyVR() {
   return (
     <Section>
       <div className="flex flex-col gap-4">
-        <h2 className="font-heading text-4xl md:text-6xl text-center mb-8">
+        <h2 className="font-heading text-heading text-5xl text-center mb-8">
           Why choose us?
         </h2>
         <div className="flex flex-col md:flex-row gap-6 px-2">
           {FEATURES.map((feature) => (
             <Card
               key={feature.title}
-              className="relative mx-auto w-full max-w-sm pt-0 shadow-md"
+              className="relative mx-auto w-full max-w-sm pt-0"
             >
               <div className="absolute inset-0 z-30 aspect-video bg-black/35" />
               <Image

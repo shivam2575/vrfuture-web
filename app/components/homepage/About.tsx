@@ -1,12 +1,12 @@
 import { Separator } from "@/components/ui/separator";
 import Image from "next/image";
-import { Section } from "./Section";
+import { Section } from "../global/Section";
 
 export function About() {
   return (
     <Section>
       <div className="">
-        <h2 className="font-heading text-4xl md:text-6xl text-center mb-8">
+        <h2 className="font-heading text-5xl text-center mb-8 text-heading">
           Our Story
         </h2>
         <div className="flex flex-col md:flex-row gap-8 items-center">
@@ -21,17 +21,13 @@ export function About() {
           </div>
           <Separator className="hidden md:block" orientation="vertical" />
           <div>
-            <p className="font-sans text-brand">
-              It is a long established fact that a reader will be distracted by
-              the readable content of a page when looking at its layout. The
-              point of using Lorem Ipsum is that it has a more-or-less normal
-              distribution of letters, as opposed to using 'Content here,
-              content here', making it look like readable English. Many desktop
-              publishing packages and web page editors now use Lorem Ipsum as
-              their default model text, and a search for 'lorem ipsum' will
-              uncover many web sites still in their infancy. Various versions
-              have evolved over the years, sometimes by accident, sometimes on
-              purpose (injected humour and the like).
+            <p className="font-sans text-primary">
+              Founded in 2020, VRFuture Coaching Institute was built to help
+              students fall in love with learning by going beyond conventional
+              teaching. Through Virtual Reality, students can visualise complex
+              concepts — making lessons more engaging, interactive, and far
+              easier to remember. We combine immersive technology with
+              experienced faculty to build confident, future-ready learners.
             </p>
           </div>
         </div>

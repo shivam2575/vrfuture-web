@@ -50,7 +50,7 @@ export default function RootLayout({
       lang="en"
       className={cn(montserrate.variable, "font-sans", inter.variable)}
     >
-      <body className="font-sans text-brand">
+      <body className="font-sans">
         <Header />
         <main>{children}</main>
         <Toaster />

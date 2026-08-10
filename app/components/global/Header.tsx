@@ -1,23 +1,47 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
 import { Menu, X } from "lucide-react";
-
-const NAV_LINKS = [
-  { title: "Home", ref: "" },
-  { title: "Programs", ref: "programs" },
-  { title: "Faculty", ref: "faculty" },
-  { title: "Gallery", ref: "gallery" },
-  { title: "Testimonials", ref: "testimonials" },
-  { title: "Contact", ref: "contact" },
-];
+import { NAV_LINKS } from "@/app/constants";
+import { EnquiryButton } from "./EnquiryButton";
+import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isSolid, setIsSolid] = useState(false);
+  const pathname = usePathname();
+
+  useEffect(() => {
+    //Store ref value of sentinel
+    const sentinelRef = document.getElementById("sentinel");
+    if (!sentinelRef) {
+      setIsSolid(true);
+      return;
+    }
+
+    //initialize the observer
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsSolid(!entry.isIntersecting);
+      },
+      { root: null, threshold: 0 },
+    );
+
+    //start observing
+    observer.observe(sentinelRef);
+
+    //when unmount then stop observing
+    return () => {
+      observer.disconnect();
+    };
+  }, [pathname]);
 
   return (
-    <nav className="sticky top-0 z-40 bg-white shadow-sm">
+    <nav
+      className={`sticky top-0 z-40 ${isSolid ? "bg-background shadow-lg" : "bg-transparent"} transition-all duration-300`}
+    >
+      {/* <div className="h-10 w-full bg-amber-700">trial box</div> */}
       <div className="mr-2 flex items-center justify-between px-6 py-3">
         {/* Logo */}
         <Link href="/">
@@ -37,9 +61,7 @@ export function Header() {
               {nav.title}
             </Link>
           ))}
-          <button className="rounded-full bg-accent-brand px-4 py-2 font-semibold text-xl text-brand">
-            Enquire Now
-          </button>
+          <EnquiryButton />
         </div>
 
         {/* Hamburger (mobile only) */}
@@ -64,9 +86,7 @@ export function Header() {
               {nav.title}
             </Link>
           ))}
-          <button className="rounded-full bg-accent px-4 py-2 font-semibold text-brand">
-            Enquire Now
-          </button>
+          <EnquiryButton className="w-full" />
         </div>
       )}
     </nav>

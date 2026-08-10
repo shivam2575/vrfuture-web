@@ -5,7 +5,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import { Section } from "./Section";
+import { Section } from "../global/Section";
 import {
   Card,
   CardContent,
@@ -18,7 +18,7 @@ import { Quote } from "lucide-react";
 export function Testimonials() {
   return (
     <Section>
-      <h2 className="font-heading text-4xl md:text-6xl text-center mb-8">
+      <h2 className="font-heading text-heading text-5xl text-center mb-8">
         What People Say
       </h2>
       <Carousel opts={{ loop: true }}>

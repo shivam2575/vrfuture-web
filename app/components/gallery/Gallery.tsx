@@ -17,11 +17,11 @@ const Gallery = ({ sections }: { sections: GallerySection[] }) => {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="mb-12 space-y-4 text-center sm:mb-16 lg:mb-24">
-          <h1 className="text-2xl font-semibold md:text-3xl lg:text-4xl font-heading">
+          <h1 className="text-2xl font-semibold lg:text-4xl font-heading text-heading">
             <span className="relative z-1">
               Explore our
               <span
-                className="bg-brand absolute bottom-1 left-0 -z-1 h-px w-full"
+                className="bg-primary absolute bottom-1 left-0 -z-1 h-px w-full"
                 aria-hidden="true"
               ></span>
             </span>{" "}

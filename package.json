@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "check:tokens": "! grep -rnoE '\\b(bg|text|border|ring)-(brand|accent-brand|surface)\\b' app components --include=*.tsx"
   },
   "dependencies": {
     "@base-ui/react": "^1.6.0",

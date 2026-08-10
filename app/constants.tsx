@@ -1,8 +1,5 @@
 import facebookIcon from "./assets/facebook.png";
 import instagramIcon from "./assets/instagram.png";
-import linkedinIcon from "./assets/linkedin.png";
-import xIcon from "./assets/x.png";
-import youtubeIcon from "./assets/youtube.png";
 import {
   GraduationCap,
   CalendarClock,
@@ -12,9 +9,12 @@ import {
   Users,
 } from "lucide-react";
 
-export const WHATSAPP_NUMBER = 917208978248;
+export const WHATSAPP_NUMBER = "918849620478";
 export const WHATSAPP_MESSAGE =
   "Hi, I'd like to know more about VRFuture program.";
+export const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
+  WHATSAPP_MESSAGE,
+)}`;
 export const NAV_LINKS = [
   { title: "Home", ref: "" },
   { title: "Programs", ref: "programs" },
@@ -24,11 +24,18 @@ export const NAV_LINKS = [
   { title: "Contact", ref: "contact" },
 ];
 export const SOCIALS = [
-  { id: "fb", src: facebookIcon, alt: "Facebook", url: "/" },
-  { id: "ig", src: instagramIcon, alt: "Instagram", url: "/" },
-  { id: "li", src: linkedinIcon, alt: "Linkedin", url: "/" },
-  { id: "x", src: xIcon, alt: "X", url: "/" },
-  { id: "yt", src: youtubeIcon, alt: "Youtube", url: "/" },
+  {
+    id: "fb",
+    src: facebookIcon,
+    alt: "Facebook",
+    url: "https://www.facebook.com/vrfuture20/",
+  },
+  {
+    id: "ig",
+    src: instagramIcon,
+    alt: "Instagram",
+    url: "https://www.instagram.com/vrfuture_/?hl=en",
+  },
 ];
 export const FEATURES = [
   {
@@ -101,34 +108,34 @@ export const TRUST_STRIP = [
 
 export const TESTIMONIALS = [
   {
-    name: "Priya Sharma",
-    role: "Parent of Class 9 student",
+    name: "Sneha Joshi",
+    role: "Parent of Class 8 student",
     quote:
-      "The VR classes made a huge difference — my daughter finally understands physics concepts she used to struggle with. She actually looks forward to going now.",
+      "My son used to find science difficult, but the VR sessions made learning interactive and fun. His confidence and grades have improved noticeably.",
   },
   {
-    name: "Rahul Desai",
+    name: "Arjun Mehta",
+    role: "Class 11 student (NEET)",
+    quote:
+      "The 3D biology lessons helped me understand anatomy far better than textbooks. It's like learning inside the human body.",
+  },
+  {
+    name: "Kavita Nair",
+    role: "Parent of Class 10 student",
+    quote:
+      "The teachers regularly update us on our daughter's progress, and the VR-based lessons have made complex topics much easier to understand.",
+  },
+  {
+    name: "Rohan Kulkarni",
     role: "Class 12 student (JEE)",
     quote:
-      "Being able to visualize 3D problems in VR made JEE prep click for me. The teachers are patient and genuinely want you to succeed.",
+      "The combination of experienced teachers and immersive VR demonstrations made difficult chemistry and physics concepts much easier to grasp.",
   },
   {
-    name: "Anjali Patel",
-    role: "Parent of Class 6 student",
+    name: "Meera Iyer",
+    role: "Parent of Class 5 student",
     quote:
-      "Teaching in Gujarati and English both helped my son a lot. VRFuture feels personal — they know every child by name.",
-  },
-  {
-    name: "Rahul Deshmukh",
-    role: "Class 12 student (JEE)",
-    quote:
-      "Being able to visualize 3D problems in VR made JEE prep click for me. The teachers are patient and genuinely want you to succeed.",
-  },
-  {
-    name: "Anjali Patil",
-    role: "Parent of Class 6 student",
-    quote:
-      "Teaching in Gujarati and English both helped my son a lot. VRFuture feels personal — they know every child by name.",
+      "My daughter enjoys every class and comes home excited to share what she learned. The interactive teaching approach has sparked her curiosity.",
   },
 ];
 

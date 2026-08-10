@@ -5,7 +5,7 @@ import { Mail, Phone, MapPin } from "lucide-react";
 
 export function Footer() {
   return (
-    <footer className="bg-brand flex flex-col text-white items-center justify-center p-2">
+    <footer className="surface-dark bg-background flex flex-col text-foreground items-center justify-center p-2">
       <div className="flex flex-col items-center justify-evenly gap-8 md:flex-row md:justify-between">
         {/* Logo + tag line */}
         <div className="mt-2">

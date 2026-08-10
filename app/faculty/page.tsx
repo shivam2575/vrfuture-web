@@ -1,8 +1,8 @@
 import Image from "next/image";
-import { Section } from "../components/homepage/Section";
+import { Section } from "../components/global/Section";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { FACULTY } from "../constants";
-import { CTA } from "../components/homepage/CTA";
+import { CTA } from "../components/global/CTA";
 import { cn } from "@/lib/utils";
 import { Badge } from "@/components/ui/badge";
 
@@ -16,9 +16,7 @@ export default function FacultyPage() {
   return (
     <div className="">
       <Section className="flex flex-col gap-6 items-center justify-center">
-        <h1 className="text-4xl md:text-6xl text-brand font-heading">
-          Our Faculty
-        </h1>
+        <h1 className="text-5xl text-heading font-heading">Our Faculty</h1>
         <p className="text-lg text-muted-foreground">
           Meet the experienced teachers behind VRFuture — expert faculty for
           Classes 5–12, JEE & NEET in Daman.
@@ -32,7 +30,7 @@ export default function FacultyPage() {
         {FACULTY.map((faculty) => (
           <Card
             key={faculty.name}
-            className="relative mx-auto w-full max-w-sm pt-0 shadow-md"
+            className="relative mx-auto w-full max-w-sm pt-0"
           >
             <Image
               src={`/${faculty.photo}`}

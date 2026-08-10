@@ -1,5 +1,4 @@
-import { Section } from "../components/homepage/Section";
-import { cn } from "@/lib/utils";
+import { Section } from "../components/global/Section";
 import { BOARDS, MEDIUMS, PROGRAMS } from "../constants";
 import { Badge } from "@/components/ui/badge";
 import {
@@ -9,7 +8,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { CTA } from "../components/homepage/CTA";
+import { CTA } from "../components/global/CTA";
 
 export const metadata = {
   title: "Programs",
@@ -22,16 +21,14 @@ export default function ProgramsPage() {
     <div>
       {/* //Heading & desc */}
       <Section className="flex flex-col gap-6 items-center justify-center">
-        <h1 className="text-4xl md:text-6xl text-brand font-heading">
-          Our Programs
-        </h1>
+        <h1 className="text-5xl text-heading font-heading">Our Programs</h1>
         <p className="text-lg text-muted-foreground">
           VR-powered coaching for Classes 5–12, JEE & NEET in Daman. CBSE, GSEB
           & ICSE boards in English, Hindi & Gujarati.
         </p>
       </Section>
       {/* Boards & Medium badge strip */}
-      <div className="bg-surface">
+      <div className="bg-muted">
         <Section>
           <div className="flex flex-wrap justify-center gap-8">
             <span>BOARDS:</span>

@@ -5,7 +5,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Section } from "./Section";
+import { Section } from "../global/Section";
 import Image from "next/image";
 import Link from "next/link";
 import { COURSES } from "@/app/constants";
@@ -13,14 +13,14 @@ import { COURSES } from "@/app/constants";
 export function Courses() {
   return (
     <Section>
-      <h2 className="font-heading text-4xl md:text-6xl text-center mb-8">
+      <h2 className="font-heading text-5xl text-center mb-8 text-heading">
         Courses We Offer
       </h2>
       <div className="flex flex-col md:flex-row gap-8 items-center justify-center">
         {COURSES.map((course) => (
           <Card
             key={course.title}
-            className="relative mx-auto w-full max-w-sm pt-0 shadow-md"
+            className="relative mx-auto w-full max-w-sm pt-0"
           >
             <Image
               src={`/${course.img}`}
@@ -36,7 +36,7 @@ export function Courses() {
             <CardFooter className="flex items-center justify-center">
               <Link
                 href="/programs"
-                className="rounded-2xl bg-brand text-white py-2 px-4"
+                className="rounded-2xl bg-primary text-white py-2 px-4"
                 aria-label={`Learn more about our ${course.title}`}
               >
                 Learn More
