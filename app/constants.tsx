@@ -1,5 +1,5 @@
-import facebookIcon from "./assets/facebook.png";
-import instagramIcon from "./assets/instagram.png";
+import { FacebookIcon, InstagramIcon } from "./components/icons/Social";
+
 import {
   GraduationCap,
   CalendarClock,
@@ -26,15 +26,15 @@ export const NAV_LINKS = [
 export const SOCIALS = [
   {
     id: "fb",
-    src: facebookIcon,
-    alt: "Facebook",
+    Icon: FacebookIcon,
+    label: "Facebook",
     url: "https://www.facebook.com/vrfuture20/",
   },
   {
     id: "ig",
-    src: instagramIcon,
-    alt: "Instagram",
-    url: "https://www.instagram.com/vrfuture_/?hl=en",
+    Icon: InstagramIcon,
+    label: "Instagram",
+    url: "https://www.instagram.com/vrfuture_/",
   },
 ];
 export const FEATURES = [

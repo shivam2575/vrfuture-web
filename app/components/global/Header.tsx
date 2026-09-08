@@ -6,6 +6,7 @@ import { NAV_LINKS } from "@/app/constants";
 import { EnquiryButton } from "./EnquiryButton";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
+import { cn } from "@/lib/utils";
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -13,14 +14,12 @@ export function Header() {
   const pathname = usePathname();
 
   useEffect(() => {
-    //Store ref value of sentinel
     const sentinelRef = document.getElementById("sentinel");
     if (!sentinelRef) {
       setIsSolid(true);
       return;
     }
 
-    //initialize the observer
     const observer = new IntersectionObserver(
       ([entry]) => {
         setIsSolid(!entry.isIntersecting);
@@ -28,39 +27,64 @@ export function Header() {
       { root: null, threshold: 0 },
     );
 
-    //start observing
     observer.observe(sentinelRef);
-
-    //when unmount then stop observing
     return () => {
       observer.disconnect();
     };
   }, [pathname]);
 
+  useEffect(() => {
+    if (!isOpen) return;
+    const onKey = (e: KeyboardEvent) => e.key === "Escape" && setIsOpen(false);
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [isOpen]);
+
   return (
     <nav
-      className={`sticky top-0 z-40 ${isSolid ? "bg-background shadow-lg" : "bg-transparent"} transition-all duration-300`}
+      className={cn(
+        "sticky top-0 z-40 transition-all duration-300",
+        isSolid
+          ? "bg-background/70 backdrop-blur-lg border-b border-border shadow-sm"
+          : "surface-dark",
+      )}
     >
-      {/* <div className="h-10 w-full bg-amber-700">trial box</div> */}
-      <div className="mr-2 flex items-center justify-between px-6 py-3">
-        {/* Logo */}
-        <Link href="/">
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-3">
+        <Link href="/" className="shrink-0">
           <Image
-            src="/logo_white.png"
+            src={isSolid ? "/logo_yellow.png" : "/logo_white.png"}
             width={768}
             height={288}
             alt="VRFuture Coaching Institute"
+            priority
             className="w-auto h-12"
           />
         </Link>
 
         {/* Desktop menu */}
-        <div className="hidden items-center gap-6 md:flex">
-          {NAV_LINKS.map((nav) => (
-            <Link key={nav.ref} href={`/${nav.ref}`} className="text-lg">
-              {nav.title}
-            </Link>
-          ))}
+        <div className="hidden items-center gap-7 md:flex">
+          {NAV_LINKS.map((nav) => {
+            const href = `/${nav.ref}`;
+            const isActive = pathname === href;
+            return (
+              <Link
+                key={nav.ref}
+                href={href}
+                aria-current={isActive ? "page" : undefined}
+                className={cn(
+                  "relative py-1 text-base transition-colors duration-200",
+                  "after:absolute after:inset-x-0 after:-bottom-0.5 after:h-px",
+                  "after:origin-left after:scale-x-0 after:bg-highlight",
+                  "after:transition-transform after:duration-300 hover:after:scale-x-100",
+                  isActive
+                    ? "text-foreground after:scale-x-100"
+                    : "text-foreground/70 hover:text-foreground",
+                )}
+              >
+                {nav.title}
+              </Link>
+            );
+          })}
           <EnquiryButton />
         </div>
 
@@ -68,7 +92,9 @@ export function Header() {
         <button
           className="md:hidden"
           onClick={() => setIsOpen(!isOpen)}
-          aria-label="Toggle menu"
+          aria-label={isOpen ? "Close menu" : "Open menu"}
+          aria-expanded={isOpen}
+          aria-controls="mobile-menu"
         >
           {isOpen ? <X /> : <Menu />}
         </button>
@@ -76,17 +102,31 @@ export function Header() {
 
       {/* Mobile dropdown */}
       {isOpen && (
-        <div className="flex flex-col gap-4 px-6 py-4 md:hidden">
-          {NAV_LINKS.map((nav) => (
-            <Link
-              key={nav.ref}
-              href={`/${nav.ref}`}
-              onClick={() => setIsOpen(false)}
-            >
-              {nav.title}
-            </Link>
-          ))}
-          <EnquiryButton className="w-full" />
+        <div
+          id="mobile-menu"
+          className="flex flex-col gap-1 border-t border-border bg-background px-6 py-4 md:hidden"
+        >
+          {NAV_LINKS.map((nav) => {
+            const href = `/${nav.ref}`;
+            const isActive = pathname === href;
+            return (
+              <Link
+                key={nav.ref}
+                href={href}
+                onClick={() => setIsOpen(false)}
+                aria-current={isActive ? "page" : undefined}
+                className={cn(
+                  "rounded-md px-2 py-2.5 transition-colors",
+                  isActive
+                    ? "bg-muted text-foreground font-medium"
+                    : "text-foreground/70 hover:bg-muted hover:text-foreground",
+                )}
+              >
+                {nav.title}
+              </Link>
+            );
+          })}
+          <EnquiryButton className="mt-2 w-full" />
         </div>
       )}
     </nav>
