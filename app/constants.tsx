@@ -37,6 +37,12 @@ export const SOCIALS = [
     url: "https://www.instagram.com/vrfuture_/",
   },
 ];
+
+export const HERO_STATS = [
+  { value: "500+", label: "Students taught" },
+  { value: "5+", label: "Years in Daman" },
+  { value: "3", label: "Boards covered" },
+];
 export const FEATURES = [
   {
     title: "Visualize Concepts",
