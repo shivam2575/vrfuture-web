@@ -13,11 +13,11 @@ export const metadata = {
     default: "VR Future Coaching Institute",
   },
   description:
-    "VR-powered coaching for Classes 5–12, JEE & NEET in Daman. CBSE, GSEB & ICSE boards in English, Hindi & Gujarati.",
+    "VR-powered coaching for Classes 5–12, JEE and NEET in Daman. CBSE, GSEB and ICSE — taught in English, Hindi and Gujarati.",
   openGraph: {
-    title: "VR Future Coaching Institute — Learn with Virtual Reality.",
+    title: "VR Future Coaching Institute — Understand it Don't memorise it.",
     description:
-      "VR-powered coaching for Classes 5–12, JEE & NEET in Daman. CBSE, GSEB & ICSE boards in English, Hindi & Gujarati.",
+      "VR-powered coaching for Classes 5–12, JEE and NEET in Daman. CBSE, GSEB and ICSE — taught in English, Hindi and Gujarati.",
     url: "https://vrfuture.in",
     siteName: "VR Future Coaching Institute",
     locale: "en_IN",
@@ -25,9 +25,9 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "VR Future Coaching Institute — Learn with Virtual Reality.",
+    title: "VR Future Coaching Institute — Understand it Don't memorise it.",
     description:
-      "VR-powered coaching for Classes 5–12, JEE & NEET in Daman. CBSE, GSEB & ICSE boards in English, Hindi & Gujarati.",
+      "VR-powered coaching for Classes 5–12, JEE and NEET in Daman. CBSE, GSEB and ICSE — taught in English, Hindi and Gujarati.",
   },
 };
 

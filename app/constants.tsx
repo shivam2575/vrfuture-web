@@ -7,6 +7,9 @@ import {
   Languages,
   Glasses,
   Users,
+  Eye,
+  Brain,
+  Sparkles,
 } from "lucide-react";
 
 export const WHATSAPP_NUMBER = "918849620478";
@@ -47,17 +50,17 @@ export const FEATURES = [
   {
     title: "Visualize Concepts",
     desc: "VR turns abstract topics into things students can see and explore.",
-    img: "placeholder.webp",
+    icon: Eye,
   },
   {
     title: "Better Retention",
     desc: "Immersive, hands-on learning sticks far longer than reading a textbook.",
-    img: "placeholder.webp",
+    icon: Brain,
   },
   {
     title: "Higher Engagement",
     desc: "Curiosity-driven VR lessons keep students genuinely interested.",
-    img: "placeholder.webp",
+    icon: Sparkles,
   },
 ];
 

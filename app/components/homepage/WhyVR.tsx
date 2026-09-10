@@ -1,41 +1,29 @@
 import { FEATURES } from "@/app/constants";
-import {
-  Card,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
 import { Section } from "../global/Section";
-import Image from "next/image";
+import { SectionHeader } from "../global/SectionHeader";
 
 export function WhyVR() {
   return (
     <Section>
-      <div className="flex flex-col gap-4">
-        <h2 className="font-heading text-heading text-5xl text-center mb-8">
-          Why choose us?
-        </h2>
-        <div className="flex flex-col md:flex-row gap-6 px-2">
-          {FEATURES.map((feature) => (
-            <Card
-              key={feature.title}
-              className="relative mx-auto w-full max-w-sm pt-0"
-            >
-              <div className="absolute inset-0 z-30 aspect-video bg-black/35" />
-              <Image
-                src={`/${feature.img}`}
-                alt="Student wearing a vr headset"
-                width={800}
-                height={700}
-                className="relative z-20 aspect-video w-full object-cover"
-              />
-              <CardHeader>
-                <CardTitle>{feature.title}</CardTitle>
-                <CardDescription>{feature.desc}</CardDescription>
-              </CardHeader>
-            </Card>
-          ))}
-        </div>
+      <SectionHeader
+        eyebrow="Why VRFuture"
+        title="Some things are easier to understand when you can see them."
+        lead="Virtual reality turns diagrams into objects your child can walk around, take apart, and remember."
+      />
+
+      <div className="mt-14 grid gap-6 md:grid-cols-3">
+        {FEATURES.map(({ icon: Icon, title, desc }) => (
+          <div
+            key={title}
+            className="group rounded-xl border border-border bg-card p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
+          >
+            <div className="flex h-11 w-11 items-center justify-center rounded-lg bg-highlight/10 text-highlight transition-colors group-hover:bg-highlight/20">
+              <Icon className="h-5 w-5" />
+            </div>
+            <h3 className="mt-5 text-xl font-heading text-heading">{title}</h3>
+            <p className="mt-2 text-muted-foreground">{desc}</p>
+          </div>
+        ))}
       </div>
     </Section>
   );
