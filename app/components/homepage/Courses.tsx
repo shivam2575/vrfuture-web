@@ -1,48 +1,45 @@
-import {
-  Card,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import { Section } from "../global/Section";
-import Image from "next/image";
 import Link from "next/link";
-import { COURSES } from "@/app/constants";
+import { ArrowRight } from "lucide-react";
+import { PROGRAMS } from "@/app/constants";
+import { Section } from "../global/Section";
+import { SectionHeader } from "../global/SectionHeader";
 
 export function Courses() {
   return (
     <Section>
-      <h2 className="font-heading text-5xl text-center mb-8 text-heading">
-        Courses We Offer
-      </h2>
-      <div className="flex flex-col md:flex-row gap-8 items-center justify-center">
-        {COURSES.map((course) => (
-          <Card
-            key={course.title}
-            className="relative mx-auto w-full max-w-sm pt-0"
+      <SectionHeader
+        eyebrow="Programmes"
+        title="Coaching for every stage, from Class 5 to entrance exams."
+        lead="CBSE, GSEB and ICSE — taught in English, Hindi and Gujarati."
+      />
+
+      <div className="mt-14 grid gap-6 md:grid-cols-2">
+        {PROGRAMS.map(({ id, title, desc, tags }) => (
+          <Link
+            id={id}
+            key={id}
+            href={`/programs#${id}`}
+            className="group flex flex-col rounded-xl border border-border bg-card p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
           >
-            <Image
-              src={`/${course.img}`}
-              alt={course.title}
-              width={800}
-              height={600}
-              className="w-full aspect-video object-cover"
-            />
-            <CardHeader>
-              <CardTitle>{course.title}</CardTitle>
-              <CardDescription>{course.desc}</CardDescription>
-            </CardHeader>
-            <CardFooter className="flex items-center justify-center">
-              <Link
-                href="/programs"
-                className="rounded-2xl bg-primary text-white py-2 px-4"
-                aria-label={`Learn more about our ${course.title}`}
-              >
-                Learn More
-              </Link>
-            </CardFooter>
-          </Card>
+            <h3 className="text-xl font-heading text-heading">{title}</h3>
+            <p className="mt-2 text-muted-foreground">{desc}</p>
+
+            <div className="mt-5 flex flex-wrap gap-2">
+              {tags.map((tag) => (
+                <span
+                  key={tag}
+                  className="rounded-md border border-border px-2.5 py-1 text-xs text-muted-foreground"
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
+
+            <span className="mt-6 inline-flex items-center gap-1.5 text-sm font-medium text-primary">
+              View programme
+              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+            </span>
+          </Link>
         ))}
       </div>
     </Section>

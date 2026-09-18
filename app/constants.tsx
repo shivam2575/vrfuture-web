@@ -64,24 +64,6 @@ export const FEATURES = [
   },
 ];
 
-export const COURSES = [
-  {
-    title: "Classes 5 to 12",
-    desc: "All the subjects from class 5 to 12 for CBSE, GSEB & ICSE boards all over Daman, Vapi, Silvas and valsad",
-    img: "placeholder.webp",
-  },
-  {
-    title: "JEE Preparation",
-    desc: "JEE preparation for class 11th-12th science students.",
-    img: "placeholder.webp",
-  },
-  {
-    title: "NEET Preparation",
-    desc: "NEET preparation for class 11th-12th science students.",
-    img: "placeholder.webp",
-  },
-];
-
 export const TRUST_STRIP = [
   {
     icon: Glasses,
@@ -153,25 +135,25 @@ export const PROGRAMS = [
     id: "foundation",
     title: "Foundation — Classes 5 to 8",
     desc: "Concept-building years, taught immersively with VR.",
-    subjects: ["Maths", "Science", "English", "Social Studies"],
+    tags: ["Maths", "Science", "English", "Social Studies"],
   },
   {
     id: "secondary",
     title: "Secondary — Classes 9 & 10",
     desc: "Board-focused coaching to build a strong base for 11–12.",
-    subjects: ["Maths", "Science", "Social Science", "English"],
+    tags: ["Maths", "Science", "Social Science", "English"],
   },
   {
     id: "higher-secondary",
     title: "Higher Secondary — Classes 11 & 12",
     desc: "Stream-wise coaching aligned to board exams.",
-    streams: ["Science", "Commerce"],
+    tags: ["Science", "Commerce"],
   },
   {
     id: "competitive",
     title: "JEE & NEET",
     desc: "Focused entrance-exam prep with VR-aided visualization.",
-    subjects: ["Physics", "Chemistry", "Maths", "Biology"],
+    tags: ["Physics", "Chemistry", "Maths", "Biology"],
   },
 ];
 

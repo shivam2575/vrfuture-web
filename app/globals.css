@@ -3,6 +3,9 @@
 @import "shadcn/tailwind.css";
 
 @custom-variant dark (&:is(.dark *));
+html {
+  scroll-padding-top: 6rem;
+}
 
 @theme {
   --text-xs: clamp(0.75rem, 0.74rem + 0.05vw, 0.781rem);
@@ -195,6 +198,7 @@
   --card-foreground: #e8ecf7;
   --border: #2a3563;
   --ring: #f4b400;
+  --heading: #e8ecf7;
 }
 
 @layer base {
