@@ -1,15 +1,12 @@
 import { FacebookIcon, InstagramIcon } from "./components/icons/Social";
 
 import {
-  GraduationCap,
-  CalendarClock,
-  BookOpenCheck,
-  Languages,
   Glasses,
   Users,
   Eye,
   Brain,
   Sparkles,
+  CalendarCheck,
 } from "lucide-react";
 
 export const WHATSAPP_NUMBER = "918849620478";
@@ -66,34 +63,19 @@ export const FEATURES = [
 
 export const TRUST_STRIP = [
   {
+    icon: CalendarCheck,
+    title: "7 days free, first",
+    desc: "Sit in on a full week of lectures before you decide anything.",
+  },
+  {
     icon: Glasses,
-    title: "VR-Enabled Learning",
-    desc: "Immersive lessons that make tough concepts click.",
-  },
-  {
-    icon: GraduationCap,
-    title: "500+ Students Taught",
-    desc: "A growing community of confident learners in Daman.",
-  },
-  {
-    icon: CalendarClock,
-    title: "5+ Years of Experience",
-    desc: "A proven track record of results parents trust.",
-  },
-  {
-    icon: BookOpenCheck,
-    title: "CBSE • GSEB • ICSE",
-    desc: "Full coverage across all three major boards.",
-  },
-  {
-    icon: Languages,
-    title: "3 Mediums",
-    desc: "Taught in English, Hindi, and Gujarati.",
+    title: "VR-enabled lessons",
+    desc: "Concepts your child can walk around, take apart, and remember.",
   },
   {
     icon: Users,
-    title: "Expert Faculty",
-    desc: "Experienced teachers dedicated to every student.",
+    title: "Experienced faculty",
+    desc: "Teachers who know every student by name, not by roll number.",
   },
 ];
 

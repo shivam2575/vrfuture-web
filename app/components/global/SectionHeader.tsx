@@ -2,10 +2,12 @@ export function SectionHeader({
   eyebrow,
   title,
   lead,
+  as: Heading = "h2",
 }: {
   eyebrow?: string;
   title: string;
   lead?: string;
+  as?: "h1" | "h2";
 }) {
   return (
     <div className="max-w-2xl">
@@ -15,7 +17,9 @@ export function SectionHeader({
           {eyebrow}
         </p>
       )}
-      <h2 className="mt-4 text-4xl font-heading text-heading">{title}</h2>
+      <Heading className="mt-4 text-4xl font-heading text-heading">
+        {title}
+      </Heading>
       {lead && <p className="mt-4 text-lg text-muted-foreground">{lead}</p>}
     </div>
   );
